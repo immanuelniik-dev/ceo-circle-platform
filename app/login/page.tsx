@@ -3,77 +3,107 @@ import { useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
 import { useRouter } from 'next/navigation'
 
-export default function Login() {
+export default function LoginPage() {
   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
+  const [error, setError] = useState<string | null>(null)
   const router = useRouter()
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    
-    // 1. Try to sign up first
-    const { error: signUpError } = await supabase.auth.signUp({
-      email,
-      password: 'temporary-password-123', // MVP: Simple password for everyone for now
-      options: {
-        data: { full_name: 'New Member' } // Default name
-      }
-    })
+    setError(null)
 
-    if (signUpError) {
-      // 2. If they exist, try to sign in
-      const { error: signInError } = await supabase.auth.signInWithPassword({
+    try {
+      const { error } = await supabase.auth.signInWithPassword({
         email,
-        password: 'temporary-password-123',
+        password,
       })
+
+      if (error) throw error
       
-      if (signInError) {
-        setMessage('Error: ' + signInError.message)
-      } else {
-        router.push('/dashboard')
-      }
-    } else {
-      // Signup successful
-      // Auto sign-in happens, push to dashboard
+      // If login successful, go to dashboard
       router.push('/dashboard')
+      router.refresh()
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
+  }
+
+  const handleSignUp = async () => {
+    setLoading(true)
+    setError(null)
+    
+    try {
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+      })
+      if (error) throw error
+      alert('Check your email for the confirmation link!')
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-      <div className="max-w-md w-full bg-slate-800 p-8 rounded-lg shadow-lg border border-yellow-600/30">
-        <h2 className="text-3xl font-bold text-yellow-500 mb-2">Member Access</h2>
-        <p className="text-gray-400 mb-6">Enter your email to enter the Circle.</p>
+    <div className="min-h-screen flex items-center justify-center bg-[#0A192F] px-4">
+      <div className="max-w-md w-full bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+        <h2 className="text-3xl font-bold text-white mb-6 text-center">Member Login</h2>
         
+        {error && (
+          <div className="bg-red-500/10 border border-red-500 text-red-500 p-3 rounded mb-4 text-sm">
+            {error}
+          </div>
+        )}
+
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-gray-300 mb-1">Business Email</label>
-            <input 
-              type="email" 
+            <label className="block text-gray-400 text-sm mb-1">Email Address</label>
+            <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 rounded bg-slate-700 text-white border border-slate-600 focus:border-yellow-500 outline-none"
-              placeholder="ceo@company.com"
-              required 
+              className="w-full bg-[#0A192F] border border-gray-700 rounded p-3 text-white focus:border-[#D4AF37] focus:outline-none"
+              placeholder="ceo@example.com"
+              required
             />
           </div>
           
-          <button 
+          <div>
+            <label className="block text-gray-400 text-sm mb-1">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full bg-[#0A192F] border border-gray-700 rounded p-3 text-white focus:border-[#D4AF37] focus:outline-none"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
             disabled={loading}
-            className="w-full bg-yellow-600 text-black font-bold py-3 rounded hover:bg-yellow-500 transition"
+            className="w-full bg-[#D4AF37] text-black font-bold py-3 rounded hover:bg-[#B5952F] transition disabled:opacity-50"
           >
-            {loading ? 'Verifying...' : 'Enter Platform'}
+            {loading ? 'Processing...' : 'Sign In'}
           </button>
-          
-          {message && <p className="text-red-400 text-sm mt-2">{message}</p>}
         </form>
-        
-        <p className="text-xs text-gray-500 mt-4 text-center">
-          *For this MVP Demo, the password is auto-set to "temporary-password-123"
-        </p>
+
+        <div className="mt-6 text-center">
+          <p className="text-gray-400 text-sm">
+            New here?{' '}
+            <button onClick={handleSignUp} className="text-[#D4AF37] hover:underline">
+              Create an account
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   )
