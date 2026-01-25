@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -26,24 +27,6 @@ export default function LoginPage() {
       // If login successful, go to dashboard
       router.push('/dashboard')
       router.refresh()
-    } catch (err: any) {
-      setError(err.message)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const handleSignUp = async () => {
-    setLoading(true)
-    setError(null)
-    
-    try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-      })
-      if (error) throw error
-      alert('Check your email for the confirmation link!')
     } catch (err: any) {
       setError(err.message)
     } finally {
@@ -99,9 +82,9 @@ export default function LoginPage() {
         <div className="mt-6 text-center">
           <p className="text-gray-400 text-sm">
             New here?{' '}
-            <button onClick={handleSignUp} className="text-[#D4AF37] hover:underline">
+            <Link href="/signup" className="text-[#D4AF37] hover:underline">
               Create an account
-            </button>
+            </Link>
           </p>
         </div>
       </div>
