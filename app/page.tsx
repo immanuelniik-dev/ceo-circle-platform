@@ -25,15 +25,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
         <div className="relative z-10">
           <h1 className="text-6xl md:text-8xl font-black mb-8 max-w-5xl tracking-tighter leading-[0.9]">
-            THE ULTIMATE <span className="text-[#D4AF37]">LEADERSHIP</span> ECOSYSTEM
+            Africa’s Biggest Circle for <span className="text-[#D4AF37]">CEOs, Founders & Visionary Leaders</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Exclusive access for Africa's most ambitious CEOs, Founders, and Investors. 
-            Where capital meets strategy.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+            Join a handpicked community of serious business leaders driving Africa’s next wave of growth, partnerships, and investment opportunities.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/signup" className="bg-[#D4AF37] text-black text-sm px-12 py-5 rounded font-black hover:scale-105 transition-all shadow-xl shadow-yellow-500/20 tracking-widest">
-              REQUEST ACCESS
+              APPLY TO JOIN THE CIRCLE
             </Link>
           </div>
         </div>
@@ -210,19 +209,6 @@ export default function Home() {
               { name: "Kwame O.", role: "Venture Capitalist", content: "CEO Circle is where I find my next high-growth investment." },
               { name: "Elena M.", role: "Tech CEO", content: "The strategic sessions saved me months of trial and error." },
               { name: "John S.", role: "Retail Magnate", content: "Premium membership is an investment that pays for itself in a week." },
-            ].map((t, i) => (
-              <div key={i} className="mx-6 w-80 p-8 bg-white/[0.02] border border-white/5 rounded-2xl flex flex-col gap-4 whitespace-normal group-hover:border-[#D4AF37]/30 transition-colors">
-                <p className="text-gray-400 text-sm leading-relaxed italic">"{t.content}"</p>
-                <div>
-                  <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-wider">{t.name}</h4>
-                  <p className="text-gray-600 text-[10px] font-black tracking-widest uppercase">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap flex items-center">
-             {[
               { name: "Aliko D.", role: "Industrialist", content: "The level of networking here is unmatched. Real deals happen in the Circle." },
               { name: "Sarah J.", role: "Fintech Founder", content: "Finally, a platform that understands the African business landscape." },
               { name: "Kwame O.", role: "Venture Capitalist", content: "CEO Circle is where I find my next high-growth investment." },
