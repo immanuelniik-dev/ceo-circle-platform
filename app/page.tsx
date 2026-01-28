@@ -254,43 +254,33 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="h-48 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                  <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="Networking" className="w-full h-full object-cover" />
+                  <img src="https://lh3.googleusercontent.com/u/0/d/1Oj2gwL243McfwCJ1QyvicM60EMcSo_Mx" alt="Networking" className="w-full h-full object-cover" />
                 </div>
                 <div className="h-64 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Strategy" className="w-full h-full object-cover" />
+                  <img src="https://lh3.googleusercontent.com/u/0/d/1Axnu7FwaDCT8gvqybXeioG7TEGxm1Kty" alt="Strategy" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="h-64 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80" alt="Meeting" className="w-full h-full object-cover" />
+                  <img src="https://lh3.googleusercontent.com/u/0/d/1V6B5jX41nGHyHrDUb6XNRv5SZKg9Rgk_" alt="Meeting" className="w-full h-full object-cover" />
                 </div>
                 <div className="h-48 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                  <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80" alt="Handshake" className="w-full h-full object-cover" />
+                  <img src="https://lh3.googleusercontent.com/u/0/d/1QDZpgJgm0_mmb6UCIgLoEXNo0VGe2V-1" alt="Handshake" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
 
-            {/* Embedded Video Placeholder */}
+            {/* Embedded Video */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-yellow-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative aspect-video bg-black rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center">
-                {/* When you have the URL, replace this iframe or use a video tag */}
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 bg-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-black fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                  <h3 className="text-white font-bold text-xl mb-2">Watch the Circle in Action</h3>
-                  <p className="text-gray-500 text-sm">A glimpse into our last physical gathering in Lagos.</p>
-                </div>
-                {/* 
                 <iframe 
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                  src="https://drive.google.com/file/d/1lIwCpNMAcy17Hv_1-wlIBhgKtwyWiDp_/preview" 
                   title="Circle Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
                 ></iframe>
-                */}
               </div>
             </div>
           </div>
@@ -323,7 +313,7 @@ export default function Home() {
             
             <div className="w-full md:w-80 bg-white/5 border border-white/10 rounded-3xl p-8 text-center flex flex-col gap-6 backdrop-blur-sm">
               <div className="text-sm text-gray-400">Ticket Price</div>
-              <div className="text-5xl font-black text-white">$2,500</div>
+              <div className="text-5xl font-black text-white">₦40,000</div>
               <ul className="text-[10px] text-gray-500 space-y-2 uppercase tracking-widest text-left mx-auto">
                 <li className="flex items-center gap-2"><span className="text-[#D4AF37]">✓</span> All Access Pass</li>
                 <li className="flex items-center gap-2"><span className="text-[#D4AF37]">✓</span> Private Dinner</li>
@@ -341,7 +331,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 text-center bg-[#081526]">
         <div className="text-2xl font-bold tracking-tighter text-[#D4AF37] mb-6">CEO & CIRCLE</div>
-        <p className="text-gray-600 text-xs font-black tracking-widest uppercase">&copy; 2026 CEO & Founder Circle. Global Leadership Ecosystem.</p>
+        <p className="text-gray-600 text-xs font-black tracking-widest uppercase">&copy; 2026 CEO & Founder Circle. Powered by Adwords Integrated Services.</p>
       </footer>
     </main>
   )
