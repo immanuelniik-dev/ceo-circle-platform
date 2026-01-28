@@ -314,6 +314,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="py-24 bg-[#0D213F]/30 border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-block px-4 py-1.5 bg-[#D4AF37]/20 rounded-full mb-6">
+            <span className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase">About the Circle</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">
+            A Curated Ecosystem for <br/><span className="text-[#D4AF37]">Leaders Who Mean Business</span>
+          </h2>
+          <div className="space-y-6 text-lg text-gray-400 font-light leading-relaxed max-w-3xl mx-auto">
+            <p>
+              The CEO & Founder Circle is more than a network. It’s a trusted, results-driven community where Africa’s top entrepreneurs and CEOs connect, learn, and scale.
+            </p>
+            <p>
+              Here, your network is your net worth. Every member is verified, every connection is meaningful, and every opportunity is actionable.
+            </p>
+          </div>
+          <div className="mt-12">
+            <Link href="/signup" className="inline-block bg-[#D4AF37] text-black text-xs px-10 py-4 rounded font-black hover:scale-105 transition-all shadow-xl shadow-yellow-500/10 tracking-[0.2em] uppercase">
+              Learn More About Membership
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 text-center bg-[#081526]">
         <div className="text-2xl font-bold tracking-tighter text-[#D4AF37] mb-6">CEO & CIRCLE</div>
