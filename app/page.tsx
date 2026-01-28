@@ -195,6 +195,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Marquee Section */}
+      <section className="py-24 overflow-hidden bg-[#0A192F]">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-black tracking-tight text-white uppercase">Voices of the Circle</h2>
+          <p className="text-gray-500 text-sm font-light mt-2">Trusted by the continent's most influential leaders</p>
+        </div>
+        
+        <div className="relative flex overflow-x-hidden group">
+          <div className="py-12 animate-marquee whitespace-nowrap flex items-center">
+            {[
+              { name: "Aliko D.", role: "Industrialist", content: "The level of networking here is unmatched. Real deals happen in the Circle." },
+              { name: "Sarah J.", role: "Fintech Founder", content: "Finally, a platform that understands the African business landscape." },
+              { name: "Kwame O.", role: "Venture Capitalist", content: "CEO Circle is where I find my next high-growth investment." },
+              { name: "Elena M.", role: "Tech CEO", content: "The strategic sessions saved me months of trial and error." },
+              { name: "John S.", role: "Retail Magnate", content: "Premium membership is an investment that pays for itself in a week." },
+            ].map((t, i) => (
+              <div key={i} className="mx-6 w-80 p-8 bg-white/[0.02] border border-white/5 rounded-2xl flex flex-col gap-4 whitespace-normal group-hover:border-[#D4AF37]/30 transition-colors">
+                <p className="text-gray-400 text-sm leading-relaxed italic">"{t.content}"</p>
+                <div>
+                  <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-wider">{t.name}</h4>
+                  <p className="text-gray-600 text-[10px] font-black tracking-widest uppercase">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap flex items-center">
+             {[
+              { name: "Aliko D.", role: "Industrialist", content: "The level of networking here is unmatched. Real deals happen in the Circle." },
+              { name: "Sarah J.", role: "Fintech Founder", content: "Finally, a platform that understands the African business landscape." },
+              { name: "Kwame O.", role: "Venture Capitalist", content: "CEO Circle is where I find my next high-growth investment." },
+              { name: "Elena M.", role: "Tech CEO", content: "The strategic sessions saved me months of trial and error." },
+              { name: "John S.", role: "Retail Magnate", content: "Premium membership is an investment that pays for itself in a week." },
+            ].map((t, i) => (
+              <div key={i} className="mx-6 w-80 p-8 bg-white/[0.02] border border-white/5 rounded-2xl flex flex-col gap-4 whitespace-normal group-hover:border-[#D4AF37]/30 transition-colors">
+                <p className="text-gray-400 text-sm leading-relaxed italic">"{t.content}"</p>
+                <div>
+                  <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-wider">{t.name}</h4>
+                  <p className="text-gray-600 text-[10px] font-black tracking-widest uppercase">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 text-center bg-[#081526]">
         <div className="text-2xl font-bold tracking-tighter text-[#D4AF37] mb-6">CEO & CIRCLE</div>
