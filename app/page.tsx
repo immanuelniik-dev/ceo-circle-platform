@@ -42,7 +42,8 @@ export default function Home() {
       <section className="py-24 bg-[#0D213F]/50 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-black mb-4 tracking-tight">MEMBERSHIP ARCHITECTURE</h2>
+            <h2 className="text-[10px] font-black tracking-[0.3em] text-[#D4AF37] mb-2 uppercase">Subscription Plans</h2>
+            <h3 className="text-4xl font-black mb-4 tracking-tight uppercase">Choose Your Path to Growth & Influence</h3>
             <div className="h-1 w-24 bg-[#D4AF37] mx-auto"></div>
           </div>
           
@@ -50,24 +51,20 @@ export default function Home() {
             {/* Free Membership */}
             <div className="group p-8 bg-white/[0.02] border border-white/10 rounded-3xl hover:bg-white/[0.04] transition-all flex flex-col">
               <div className="mb-6">
-                <div className="text-[10px] font-black tracking-[0.2em] text-gray-500 mb-2">ENTRY LEVEL</div>
+                <div className="text-[10px] font-black tracking-[0.2em] text-gray-500 mb-2 uppercase">Entry Level</div>
                 <h3 className="text-2xl font-black text-white">Free Membership</h3>
               </div>
               <div className="space-y-6 flex-grow">
                 <div>
-                  <h4 className="text-[10px] font-black text-[#D4AF37] mb-3 tracking-widest uppercase">Access & Permissions</h4>
-                  <ul className="text-sm text-gray-400 space-y-2 font-light">
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> View and edit own profile only</li>
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Platform overview (Members, Investors, Courses)</li>
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Explore locked features with upgrade prompts</li>
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Eligible for Gathering or Premium upgrades</li>
+                  <h4 className="text-[10px] font-black text-[#D4AF37] mb-3 tracking-widest uppercase">Core Benefits</h4>
+                  <ul className="text-sm text-gray-400 space-y-4 font-light">
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Get started and create your verified profile</li>
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Access high-level platform insights</li>
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Unlock growth potential through exclusive events and opportunities</li>
                   </ul>
                 </div>
-                <div className="pt-4 border-t border-white/5">
-                  <h4 className="text-[10px] font-black text-red-500/70 mb-3 tracking-widest uppercase">Restrictions</h4>
-                  <p className="text-xs text-gray-500 font-light italic">
-                    No access to other members’ contact details, messaging, booking, pitching, or direct interactions.
-                  </p>
+                <div className="mt-auto pt-8">
+                  <Link href="/signup" className="w-full inline-block text-center bg-white/5 text-white text-[10px] font-black py-4 rounded-xl border border-white/10 hover:bg-[#D4AF37] hover:text-black transition-all tracking-widest uppercase">Apply / Upgrade Now</Link>
                 </div>
               </div>
             </div>
@@ -75,27 +72,20 @@ export default function Home() {
             {/* Gathering Membership */}
             <div className="group p-8 bg-white/[0.02] border border-white/10 rounded-3xl hover:bg-white/[0.04] transition-all flex flex-col relative">
               <div className="mb-6">
-                <div className="text-[10px] font-black tracking-[0.2em] text-[#D4AF37] mb-2">EVENT FOCUS</div>
+                <div className="text-[10px] font-black tracking-[0.2em] text-[#D4AF37] mb-2 uppercase">Event Focused</div>
                 <h3 className="text-2xl font-black text-white">Gathering Member</h3>
-                <p className="text-[10px] text-gray-500 font-bold mt-1 tracking-widest uppercase">Paid – Per Event / Period</p>
               </div>
               <div className="space-y-6 flex-grow">
                 <div>
-                  <h4 className="text-[10px] font-black text-[#D4AF37] mb-3 tracking-widest uppercase">Access & Permissions</h4>
-                  <ul className="text-sm text-gray-400 space-y-2 font-light">
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Attend physical or virtual gatherings</li>
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> View name/product/service of Free Members</li>
-                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Participate in event-only discussions</li>
+                  <h4 className="text-[10px] font-black text-[#D4AF37] mb-3 tracking-widest uppercase">Core Benefits</h4>
+                  <ul className="text-sm text-gray-400 space-y-4 font-light">
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Attend curated networking events across Africa and online</li>
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> Connect with verified business leaders</li>
+                    <li className="flex items-start"><span className="text-[#D4AF37] mr-2">•</span> See the products and services of Free Members</li>
                   </ul>
                 </div>
-                <div className="pt-4 border-t border-white/5">
-                  <h4 className="text-[10px] font-black text-red-500/70 mb-3 tracking-widest uppercase">Restrictions</h4>
-                  <p className="text-xs text-gray-500 font-light italic">
-                    Cannot view phone numbers or email addresses of members.
-                  </p>
-                </div>
-                <div className="mt-auto pt-6">
-                  <Link href="/signup" className="text-[10px] font-black text-[#D4AF37] hover:underline tracking-widest uppercase">Upgrade Path &rarr;</Link>
+                <div className="mt-auto pt-8">
+                  <Link href="/signup" className="w-full inline-block text-center bg-white/5 text-white text-[10px] font-black py-4 rounded-xl border border-white/10 hover:bg-[#D4AF37] hover:text-black transition-all tracking-widest uppercase">Apply / Upgrade Now</Link>
                 </div>
               </div>
             </div>
@@ -103,27 +93,21 @@ export default function Home() {
             {/* Premium Membership */}
             <div className="group p-8 bg-[#D4AF37] border border-[#D4AF37] rounded-3xl transition-all flex flex-col shadow-2xl shadow-yellow-500/20 scale-105 z-10">
               <div className="mb-6">
-                <div className="text-[10px] font-black tracking-[0.2em] text-black/60 mb-2">FULL ACCESS</div>
+                <div className="text-[10px] font-black tracking-[0.2em] text-black/60 mb-2 uppercase">Full Access</div>
                 <h3 className="text-2xl font-black text-black">Premium Member</h3>
-                <p className="text-[10px] text-black/60 font-bold mt-1 tracking-widest uppercase">The Executive Standard</p>
               </div>
               <div className="space-y-6 flex-grow">
                 <div>
-                  <h4 className="text-[10px] font-black text-black/80 mb-3 tracking-widest uppercase border-b border-black/10 pb-1">Access & Permissions</h4>
-                  <ul className="text-sm text-black/80 space-y-2 font-bold">
-                    <li className="flex items-start"><span className="mr-2">✓</span> Full member directory access</li>
-                    <li className="flex items-start"><span className="mr-2">✓</span> View Phone & Email of all members</li>
-                    <li className="flex items-start"><span className="mr-2">✓</span> One-on-One Strategic Sessions</li>
-                    <li className="flex items-start"><span className="mr-2">✓</span> Live Booking & Mentor Requests</li>
-                    <li className="flex items-start"><span className="mr-2">✓</span> Pitch Business to Community</li>
-                    <li className="flex items-start"><span className="mr-2">✓</span> Promote Product or Service</li>
+                  <h4 className="text-[10px] font-black text-black/80 mb-3 tracking-widest uppercase border-b border-black/10 pb-1">Executive Standards</h4>
+                  <ul className="text-sm text-black/80 space-y-4 font-bold">
+                    <li className="flex items-start"><span className="mr-2">✓</span> Full access to the member directory with verified contacts</li>
+                    <li className="flex items-start"><span className="mr-2">✓</span> One-on-One strategy sessions and mentorship</li>
+                    <li className="flex items-start"><span className="mr-2">✓</span> Pitch your business and promote your products/services</li>
+                    <li className="flex items-start"><span className="mr-2">✓</span> Access accountability partners and premium growth tools</li>
                   </ul>
                 </div>
-                <div className="pt-4 border-t border-black/10">
-                  <h4 className="text-[10px] font-black text-black/80 mb-3 tracking-widest uppercase">Exclusive Features</h4>
-                  <p className="text-xs text-black/70 font-medium">
-                    Accountability Partners, Direct Communication, and Community-wide Pitching Rights.
-                  </p>
+                <div className="mt-auto pt-8">
+                  <Link href="/signup" className="w-full inline-block text-center bg-black text-[#D4AF37] text-[10px] font-black py-4 rounded-xl border border-black hover:bg-black/80 transition-all tracking-widest uppercase">Apply / Upgrade Now</Link>
                 </div>
               </div>
             </div>
