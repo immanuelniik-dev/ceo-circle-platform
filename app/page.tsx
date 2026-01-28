@@ -241,6 +241,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery & Video Section */}
+      <section className="py-24 bg-[#0D213F]/30 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4 tracking-tight uppercase">Circle Experience</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto font-light">Peek inside our world of high-level strategy and elite networking.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="h-48 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                  <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="Networking" className="w-full h-full object-cover" />
+                </div>
+                <div className="h-64 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                  <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Strategy" className="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div className="space-y-4 pt-8">
+                <div className="h-64 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80" alt="Meeting" className="w-full h-full object-cover" />
+                </div>
+                <div className="h-48 bg-gray-800 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                  <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80" alt="Handshake" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+
+            {/* Embedded Video Placeholder */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-yellow-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative aspect-video bg-black rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center">
+                {/* When you have the URL, replace this iframe or use a video tag */}
+                <div className="text-center p-8">
+                  <div className="w-20 h-20 bg-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-black fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                  <h3 className="text-white font-bold text-xl mb-2">Watch the Circle in Action</h3>
+                  <p className="text-gray-500 text-sm">A glimpse into our last physical gathering in Lagos.</p>
+                </div>
+                {/* 
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                  title="Circle Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+                */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Event Section */}
+      <section className="py-24 bg-[#0A192F]">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1">
+              <div className="inline-block px-4 py-1.5 bg-[#D4AF37]/20 rounded-full mb-6">
+                <span className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase">Upcoming Experience</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">The CEO Summit 2026: <br/><span className="text-[#D4AF37]">Capital & Strategy</span></h2>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3 text-gray-400">
+                  <svg className="w-5 h-5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span className="text-sm">March 15-17, 2026</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-400">
+                  <svg className="w-5 h-5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span className="text-sm">Radisson Blu, Victoria Island, Lagos</span>
+                </div>
+              </div>
+              <p className="text-gray-500 mb-10 leading-relaxed font-light">
+                Three days of intensive high-level networking, private capital matching, and strategic market positioning for Africa's leading enterprises.
+              </p>
+            </div>
+            
+            <div className="w-full md:w-80 bg-white/5 border border-white/10 rounded-3xl p-8 text-center flex flex-col gap-6 backdrop-blur-sm">
+              <div className="text-sm text-gray-400">Ticket Price</div>
+              <div className="text-5xl font-black text-white">$2,500</div>
+              <ul className="text-[10px] text-gray-500 space-y-2 uppercase tracking-widest text-left mx-auto">
+                <li className="flex items-center gap-2"><span className="text-[#D4AF37]">✓</span> All Access Pass</li>
+                <li className="flex items-center gap-2"><span className="text-[#D4AF37]">✓</span> Private Dinner</li>
+                <li className="flex items-center gap-2"><span className="text-[#D4AF37]">✓</span> Investor Matching</li>
+              </ul>
+              <button className="w-full bg-[#D4AF37] hover:bg-[#B5952F] text-black font-black py-4 rounded-xl transition-all shadow-xl shadow-yellow-500/10 tracking-widest text-xs">
+                PURCHASE TICKET
+              </button>
+              <p className="text-[9px] text-gray-600">Limited to 50 participants for exclusivity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-20 border-t border-white/5 text-center bg-[#081526]">
         <div className="text-2xl font-bold tracking-tighter text-[#D4AF37] mb-6">CEO & CIRCLE</div>
